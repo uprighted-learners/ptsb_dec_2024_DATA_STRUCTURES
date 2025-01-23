@@ -21,6 +21,17 @@ let learners = [
             - For all the other learners, keep the format the same as what it was above 
 */
   
+let myName = "Amit";
+
+learners.forEach((learner) => {
+    let learnersLetters = learner.length
+    if(myName === learner){
+      console.log(`Hey, I'm ${learner}🙌😄! And my name ${learnersLetters} letters long!`);
+    }else {
+      console.log(`${learner}'s name is ${learnersLetters} letters long.`);
+    }
+})
+
 
 /*
     ! Challenge 🟡 
@@ -34,7 +45,20 @@ let learners = [
             - Call the function. Be sure to log the invocation, so the desired result can be seen in the output window.
   */
 
+function myFilterFunc (array, letter) {
+  return array.filter((learner) => {
+      if (learner[0].toLowerCase() === letter.toLowerCase() ){
+        return true
+      } else {
+        return false
+      }
+  })
+}
 
+const myArrowFilterFunc = (array, letter) => array.filter(l => l[0].toLowerCase() === letter.toLowerCase()) 
+
+console.log(myFilterFunc(learners, "J"))
+// console.log(myArrowFilterFunc(learners, "J"))
 
   /*
     ! Challenge 🔴
@@ -52,6 +76,15 @@ let learners = [
   */
   
 
+const myMapperFunc = (array, message) => {
+    return array.map(l => {
+      return `${l} ${message}`
+    })
+}
+
+console.log(myMapperFunc(learners, "is awesome! 😀"))
+
+
 /*
     ! Challenge 🌶️🥵🔥
     ?   .reduce()  - Apply action for each value, resulting in a single valued outcome
@@ -61,3 +94,15 @@ let learners = [
             - Have the allLetters function return the value
             - Log the output, "Total letters: X letters" , where X represents the sum of all the letters from each learners name.
 */
+
+const allLetters = (array) => {
+  return array.reduce((letters, learner) => {
+         letters += learner.length
+         return letters
+  }, 0)
+}
+
+// let sumOfAllLetters = allLetters(learners)
+
+console.log(`Total letters: ${allLetters(learners)} letters`)
+
