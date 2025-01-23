@@ -66,4 +66,3 @@ let horrorMovies = movies.filter(movie => movie.category.includes("Horror")) // 
 
 console.log(horrorMovies);
 
-let instructors = ["Daniel", "Amit"]
