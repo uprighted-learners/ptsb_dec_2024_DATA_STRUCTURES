@@ -69,7 +69,9 @@ theSimpsons.currently_running = false
 
 theSimpsons.seasons["season one"][0].aired = "1990-12-17"
 
-console.log(theSimpsons.seasons);
+console.log(theSimpsons); // Certain nested properties cannot be seen, we get string representation of objects [Object object]
+
+console.log(JSON.stringify(theSimpsons, null, 2)); // Will show the object in its entirety
 
 // Reference
 
