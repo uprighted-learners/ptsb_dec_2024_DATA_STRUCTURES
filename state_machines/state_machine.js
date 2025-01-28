@@ -21,7 +21,9 @@ function enterState (newState) {
 }
 
 
-enterState("yellow") // Current state = "yellow"
-enterState("green") // ! Invalid transition
-enterState("red")
-enterState("yellow")
+enterState("yellow") // Valid Current state = "yellow"
+enterState("green") // ! Invalid transition yellow to green
+enterState("red") // Valid Current state = "red"
+enterState("yellow")  // ! Invalid transition red to yellow
+enterState("yield") // Valid Current state = "yield"
+enterState("red") // Valid Current state = "red"
