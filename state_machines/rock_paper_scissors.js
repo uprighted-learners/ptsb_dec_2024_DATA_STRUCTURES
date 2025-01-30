@@ -98,8 +98,6 @@ async function testValidCommand () {
     } else {
         console.log("command not recognized");
     }
-
-
 }
 
 // testValidCommand()
